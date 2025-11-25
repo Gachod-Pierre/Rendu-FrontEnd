@@ -1,10 +1,23 @@
 <script setup lang="ts">
+
+const props = defineProps<{
+  size?: 'giant' | 'large' | 'medium' | 'small' | 'tiny'
+  disabled?: boolean
+  href?: string
+}>()
+
 </script>
 
+
 <template>
-  <button class="button">
-    <slot />
-  </button>
+  <component
+  :is="href ? 'a' : 'button'"
+  :href="href"
+  class="button"
+  :disabled="disabled"
+>
+  <slot />
+</component>
 </template>
 
 <style scoped lang="scss">
