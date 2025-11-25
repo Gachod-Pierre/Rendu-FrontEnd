@@ -51,4 +51,25 @@ const sizeClass = {
   background-color: var(--btn-bg);
   color: var(--btn-color);
 }
+
+&:hover:not([disabled]) {
+  background-color: var(--btn-bg-hover);
+}
+
+&:active:not([disabled]) {
+  background-color: var(--btn-bg-press);
+  transform: scale(0.97);
+}
+
+&:focus-visible:not([disabled]) {
+  outline: 3px solid rgba(50, 90, 255, 0.4);
+  outline-offset: 2px;
+}
+
+&[disabled] {
+  background-color: var(--btn-bg-disabled);
+  color: var(--btn-color-disabled);
+  cursor: not-allowed;
+}
+
 </style>
