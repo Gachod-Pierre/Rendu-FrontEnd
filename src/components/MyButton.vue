@@ -30,5 +30,15 @@ const sizeClass = {
 </template>
 
 <style scoped lang="scss">
-.button {}
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  transition: background-color .15s, transform .15s, color .15s;
+}
 </style>
