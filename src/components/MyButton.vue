@@ -1,4 +1,7 @@
 <script setup lang="ts">
+
+import { computed } from 'vue'
+
 const props = defineProps<{
   size?: 'giant' | 'large' | 'medium' | 'small' | 'tiny'
   disabled?: boolean
@@ -6,15 +9,19 @@ const props = defineProps<{
   variant?: 'default' | 'outline'
 }>()
 
-const sizeClass = {
-  giant: '-giant',
-  large: '-large',
-  medium: '-medium',
-  small: '-small',
-  tiny: '-tiny',
-}[props.size ?? 'medium']
+const sizeClass = computed(() => {
+  return {
+    giant: '-giant',
+    large: '-large',
+    medium: '-medium',
+    small: '-small',
+    tiny: '-tiny',
+  }[props.size ?? 'medium']
+})
 
-const variantClass = props.variant ? `-${props.variant}` : '-default'
+const variantClass = computed(() => {
+  return `-${props.variant ?? 'default'}`
+})
 </script>
 
 <template>
