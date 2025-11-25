@@ -58,7 +58,6 @@ const sizeClass = {
 
 &:active:not([disabled]) {
   background-color: var(--btn-bg-press);
-  transform: scale(0.97);
 }
 
 &:focus-visible:not([disabled]) {
