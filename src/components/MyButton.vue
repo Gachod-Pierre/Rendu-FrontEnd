@@ -72,4 +72,36 @@ const sizeClass = {
   cursor: not-allowed;
 }
 
+&.-giant {
+  height: 64px;
+  padding: 0 32px;
+  font-size: 1.2rem;
+}
+
+&.-large {
+  height: 56px;
+  padding: 0 28px;
+  font-size: 1.1rem;
+}
+
+&.-medium {
+  height: 48px;
+  padding: 0 24px;
+  font-size: 1rem;
+}
+
+&.-small {
+  height: 40px;
+  padding: 0 20px;
+  font-size: 0.9rem;
+}
+
+&.-tiny {
+  height: 32px;
+  padding: 0 16px;
+  font-size: 0.8rem;
+  border-radius: 6px;
+}
+
+
 </style>
