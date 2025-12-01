@@ -22,6 +22,13 @@ const sizeClass = computed(() => {
 const variantClass = computed(() => {
   return `-${props.variant ?? 'default'}`
 })
+
+const emit = defineEmits(['clickAndHover']);
+
+function handleClickAndHover() {
+  emit('clickAndHover');
+}
+
 </script>
 
 <template>
@@ -31,6 +38,8 @@ const variantClass = computed(() => {
     class="button"
     :class="[sizeClass, variantClass]"
     :disabled="disabled"
+    @click="handleClickAndHover"
+    @mouseenter="handleClickAndHover"
   >
     <slot />
   </component>
